@@ -8,8 +8,9 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #2b2825;
-      color: #333;
+      background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      background-color: #000;
+      color: #f5f5f5;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -18,9 +19,22 @@
 
     h1 {
       text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      color: #b22222;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, #f12711, #f5af19);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .slogan {
+      font-size: 1.2rem;
+      color: #f0e68c;
+      margin-bottom: 2rem;
+      font-style: italic;
+      animation: fadeIn 1.5s ease-out;
     }
 
     .grid-container {
@@ -32,17 +46,26 @@
     }
 
     .icon {
-      background: #fff;
+      background: #1c1c1c;
       border-radius: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
       padding: 1rem;
       text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: iconFade 1s ease-out forwards;
     }
+
+    .icon:nth-child(1) { animation-delay: 0.2s; }
+    .icon:nth-child(2) { animation-delay: 0.4s; }
+    .icon:nth-child(3) { animation-delay: 0.6s; }
+    .icon:nth-child(4) { animation-delay: 0.8s; }
+    .icon:nth-child(5) { animation-delay: 1s; }
+    .icon:nth-child(6) { animation-delay: 1.2s; }
 
     .icon:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 14px rgba(255,215,0,0.4);
     }
 
     .icon img {
@@ -56,18 +79,31 @@
       font-weight: 600;
       display: block;
       font-size: 0.9rem;
-      color: #444;
+      color: #f0e68c;
     }
 
     footer {
       margin-top: 2rem;
       font-size: 0.85rem;
-      color: #888;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes iconFade {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Food Trucks Atzala</h1>
+  <div class="slogan">Sabor en cada rincón 🍴🔥</div>
   <div class="grid-container">
     <a class="icon" href="https://link1.com">
       <img src="pepelote.jpg" alt="Pepelote">
@@ -77,11 +113,11 @@
       <img src="tacos-del-norte.jpg" alt="Sonora Querida">
       <span>Tacos del Norte Sonora querida</span>
     </a>
-    <a class="icon" href="">
+    <a class="icon" href="Menú .png">
       <img src="Logo LMDR px.png" alt="LMDR">
       <span>Las Marquesitas del Rey</span>
     </a>
-    <a class="icon" href="">
+    <a class="icon" href="MenúHW.pdf">
       <img src="haiti-wings.jpg" alt="Haiti Wings">
       <span>Haiti Wings</span>
     </a>
