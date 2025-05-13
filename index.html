@@ -129,9 +129,28 @@
       <img src="Promos.png" alt="Promociones">
       <span>Promociones</span>
     </a>
-  </div>
+    </div>
+         <div id="promo-section" style="display:none; margin-top: 2rem; text-align:center;">
+         <h2 style="color:#f9d423;">🎉 Promociones Especiales</h2>
+         <p>Consulta nuestras ofertas semanales y combos únicos.</p>
+         <img src="promo-banner.jpg" alt="Promociones" style="max-width:100%; border-radius: 12px;">
+    </div>
   <footer>
     &copy; 2025 Food Trucks Campestre San Antonio
   </footer>
+<script>
+  document.querySelectorAll('.icon').forEach(el => {
+    el.addEventListener('click', function (e) {
+      const alt = this.querySelector('img').alt;
+      if (alt === 'Promociones') {
+        e.preventDefault();
+        const section = document.getElementById('promo-section');
+        section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
