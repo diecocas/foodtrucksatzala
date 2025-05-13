@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Trucks Campestre San Antonio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #2b2825;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #b22222;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .icon {
+      background: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    .icon img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+
+    .icon span {
+      font-weight: 600;
+      display: block;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Food Trucks Atzala</h1>
+  <div class="grid-container">
+    <a class="icon" href="https://link1.com">
+      <img src="pepelote.jpg" alt="Pepelote">
+      <span>Pepelote</span>
+    </a>
+    <a class="icon" href="">
+      <img src="tacos-del-norte.jpg" alt="Sonora Querida">
+      <span>Tacos del Norte Sonora querida</span>
+    </a>
+    <a class="icon" href="">
+      <img src="Logo LMDR px.png" alt="LMDR">
+      <span>Las Marquesitas del Rey</span>
+    </a>
+    <a class="icon" href="">
+      <img src="haiti-wings.jpg" alt="Haiti Wings">
+      <span>Haiti Wings</span>
+    </a>
+    <a class="icon" href="">
+      <img src="Fonda-de-bikini.jpg" alt="Fonda de Bikini">
+      <span>Fonda de Bikini</span>
+    </a>
+    <a class="icon" href="">
+      <img src="Promos.png" alt="Promociones">
+      <span>Promociones</span>
+    </a>
+  </div>
+  <footer>
+    &copy; 2025 Food Trucks Campestre San Antonio
+  </footer>
+</body>
+</html>
